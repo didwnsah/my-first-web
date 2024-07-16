@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>나를 소개합니다</title>
+    <meta charset="utf-8">
+    <style>
+        a{
+            color:rgb(0, 255, 60);
+            text-decoration:
+            underline;
+        }
+        h1{
+            
+        border-width: 5px;
+        border-color:blue;
+        border-style: solid;
+        color:brown;
+        padding:20px;
+        margin:20px;
+        }
+        div{
+            border:5px, solid,gray;
+            display:grid;
+            grid-template-columns: 100px,1fr;
+        }
+        #gri{
+            border:5px,solid,pink
+        }
+        @media(max-width:500px){
+            #gri{display:none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>나를 소개합니다</h1>
+    <h2>20713양준모</h2>
+    <img src="program.png" width="300">
+    <p>
+        <a href ="https://www.career.go.kr/cnet/front/base/job/jobViewGb4.do?SEQ=4_D_D019_10001">저의 진로는 컴퓨터 프로그래머 입니다</a><br>
+        <a href ="http://cheongra.icehs.kr/main.do">저는 청라고등학에 재학중입니다</a><br>
+    </p>
+    <h3>취미</h3>
+    <ol>
+        <li>음악듣기</li>
+        <li>게임하기</li>
+        <li>잠자기</li>
+    </ol>
+    <div id="gri">
+        <div>곰표</div>
+        <div>곰표2</div>
+    </div>
+    <input type="button" value="day" onclick="
+    if (document.querySelector('body').dataset.mode==='night'){
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('body').dataset.mode='day';
+        this.value='day';
+    }
+    else{
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('body').dataset.mode='night';
+        this.value='night';
+    }">
+</body>
+</html>
